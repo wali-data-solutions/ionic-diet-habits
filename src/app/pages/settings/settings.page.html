@@ -1,0 +1,105 @@
+  <!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content padding no-bounce has-bouncing="false" forceOverscroll="false">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-label class="titles-text-colors"><b>Tracking</b></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row  style="margin-top: 0">
+      <ion-col class="chart-toggle-background">
+        <ion-img src="../../assets/icon/chart_icon.png" class="settings-chart-image-size"></ion-img>
+        <ion-toggle [(ngModel)]="track" (ionChange)="trackingChange()" text-end></ion-toggle>
+      </ion-col>
+    </ion-row>
+      
+    <ion-row>
+      <ion-col>
+        <ion-label class="titles-text-colors"><b> Delay for self-rating </b></ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label class="titles-text-colors"><b> mylimit </b></ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 0">
+      <ion-col class="limit-block-size" (click)="setPauseTime()">
+        <!-- <ion-label class="limit-text-size">{{delayMins}}</ion-label> -->
+        <ion-label class="limit-text-size">{{delayMins}}</ion-label>
+        <ion-label style="float: right">
+            <ion-icon name="arrow-dropup" class="div-arrow-drop-up"></ion-icon>
+            <ion-icon name="arrow-dropdown" class="div-arrow-drop-down"></ion-icon>
+        </ion-label>
+      </ion-col>
+      <ion-col class="limit-block-size" (click)="setDesireLimit()">
+        <ion-label class="limit-text-size">{{desireLimit}}</ion-label>
+        <ion-label style="float: right">
+            <ion-icon name="arrow-dropup" class="div-arrow-drop-up"></ion-icon>
+            <ion-icon name="arrow-dropdown" class="div-arrow-drop-down"></ion-icon>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+   
+    <ion-row>
+      <ion-col>
+        <ion-label class="titles-text-colors"><b>mylimit Texts</b></ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 0">
+      <ion-col>
+
+        <ion-list>
+          <ion-img src="../../assets/icon/go_red.png" class="mylogic-image-size"></ion-img>
+          <ion-radio-group [(ngModel)]="goSelected" name="go" (ionChange)="goTextUpdate()">
+            <ion-item *ngFor="let txt of text.goText">
+              <ion-radio value="{{txt.description}}" *ngIf=" txt.name == 'Own text'" (click)="customTextGo(txt.description)"></ion-radio>
+              <ion-radio value="{{txt.description}}" *ngIf=" txt.name != 'Own text'"></ion-radio>
+              <ion-label class="checkbox-text-padding">
+                {{ txt.description }}
+              </ion-label>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+
+        <ion-list>
+          <ion-img src="../../assets/icon/go_orange.png" class="mylogic-image-size"></ion-img>
+          <ion-radio-group [(ngModel)]="goAnywaySelected" name="goAnyway" (ionChange)="goAnywayTextUpdate()">
+          <ion-item *ngFor="let txt of text.goAnywayText">
+            <ion-radio value="{{txt.description}}" *ngIf=" txt.name == 'Own text'" (click)="customTextGoAnyway(txt.description)"></ion-radio>
+            <ion-radio value="{{txt.description}}" *ngIf=" txt.name != 'Own text'"></ion-radio>
+              <ion-label class="checkbox-text-padding">
+                {{ txt.description }}
+              </ion-label>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+
+        <ion-list>
+          <ion-radio-group [(ngModel)]="waitSelected" name="wait" (ionChange)="waitTextUpdate()">
+            <ion-img src="../../assets/icon/go_yellow.png" class="mylogic-image-size"></ion-img>
+            <ion-item *ngFor="let txt of text.waitText">
+              <ion-radio value="{{txt.description}}" *ngIf=" txt.name == 'Own text'" (click)="customTextWait(txt.description)"></ion-radio>
+              <ion-radio value="{{txt.description}}" *ngIf=" txt.name != 'Own text'"></ion-radio>
+              <ion-label class="checkbox-text-padding">
+                {{ txt.description }}
+              </ion-label>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

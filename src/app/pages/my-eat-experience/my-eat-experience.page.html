@@ -1,0 +1,43 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>  My Eat Experience</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+  <ion-content padding-top padding-bottom no-bounce has-bouncing="false" forceOverscroll="false" class="full-background-color">
+    <h3 class="center-aligns m-t-20">My Eat Experience</h3>
+    <p class="center-aligns m-t-20">
+          <span class="heading-experience">Eat Enjoyment</span>
+    </p>
+    <ion-row>
+      <ion-col size="12" class="p-0">
+          <app-speedometer-eat></app-speedometer-eat>
+      </ion-col>
+      <ion-col  size="12" class="p-0">
+          <div class="guage-range">
+              <input type="range" min="0"  max="100"  value="0" class="slider" [(ngModel)]="myGoodExperience" name="formRange" formControlname="formRange"   (ngModelChange)="enjoymentExperienceEvent()">
+          </div>
+      </ion-col>
+    </ion-row>
+    <p class="center-aligns">
+        <span class="heading-experience"> Guilt Experience</span>
+    </p>
+    <ion-row>
+      <ion-col  size="12" class="p-0">
+          <app-speedometer-guilt></app-speedometer-guilt>
+      </ion-col>
+      <ion-col  size="12" class="p-0">
+          <div class="guage-range">
+              <input type="range" min="0"  max="100"  value="0" class="slider" [(ngModel)]="myBadExperience" 
+                name="formRange" formControlname="formRange"  (ngModelChange)="badExperienceEvent()">
+          </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col class="button-aligns center-aligns">
+          <ion-button  shape="round" class="button-color button-width" (click)="laterReminder()"  padding ><b>Later</b></ion-button>
+          <ion-button shape="round" disabled ="{{ buttonStatus }}" (click)="addExperience()" class="button-color button-width" padding><b>Done</b></ion-button>
+        </ion-col>
+    </ion-row>
+    
+</ion-content>
+

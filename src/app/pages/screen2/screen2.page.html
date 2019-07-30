@@ -1,0 +1,31 @@
+
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title> Screen 2a</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content padding no-bounce has-bouncing="false" forceOverscroll="false" class="center-aligns full-background-color">
+ 
+  <div class="margin-top10">
+    <ion-col>
+      <div class="talk-bubble tri-right round border right-top" style="margin-left:15%;margin-bottom:15px; ">
+          <div class="talktext">
+            <p>{{ text }}</p>
+          </div>
+      </div>
+    </ion-col>
+    <app-range-slider-static></app-range-slider-static>
+  </div>
+  <ion-row>
+    <ion-col>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+    <ion-col>
+      <ion-button shape="round" class="float-right button-color" (click)="geteatExperienceStatus()"><b>Done</b></ion-button>
+    </ion-col>
+   
+  </ion-row>
+
+</ion-content>

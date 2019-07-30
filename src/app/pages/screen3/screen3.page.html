@@ -1,0 +1,28 @@
+
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title> Screen 3</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-content padding no-bounce has-bouncing="false" forceOverscroll="false" class="full-background-color">
+  <ion-input type="hidden" id="range" name="range" [(ngModel)]="range"></ion-input>
+  <app-range-slider-static2></app-range-slider-static2>
+  <ion-row>
+      <ion-col class="flex-display">
+        <div class="talk-bubble tri-right round  border right-in" id="you" style=" margin-top:10px;">
+          <div class="talktext text-field">
+            <p>{{textGoAnyway}}</p>
+          </div>
+
+        </div>
+      </ion-col> 
+      <ion-col size='2'></ion-col> 
+      <ion-col class="flex-display">
+        <div class="talk-bubble tri-right round  border right-in" id="you" style=" margin-top:10px;">
+            <div class="talktext text-field">
+              <p>{{textWait}}</p>
+            </div>
+        </div>
+      </ion-col>  
+  </ion-row>
+</ion-content>

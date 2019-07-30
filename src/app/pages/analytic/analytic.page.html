@@ -1,0 +1,72 @@
+<!-- <ion-header>
+    <ion-toolbar>
+      <ion-title> Tracking</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+<ion-content class="layout-allign full-background-color" padding-top padding-bottom no-bounce>
+       
+       <h2 text-center>MY FOOD-GO HISTORY</h2>
+        <ion-row>
+          <ion-col size="12" class="select-background ion-float-right filter-border">
+            <ion-select color='black' placeholder="Select Date"  okText="Choose" class="option-menu" cancelText="Cancel" [(ngModel)]="filterDate" (ionChange)="change($event)">
+                <ion-select-option value="today">Today</ion-select-option>
+                <ion-select-option value="yesterday">Yesterday</ion-select-option>
+                <ion-select-option value="7">Last 7 days</ion-select-option>
+                <ion-select-option value="15">Last 15 days</ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+        <!--scatter chart section-->
+        <ion-row>
+            <ion-col size="6" text-center>
+                <h6 text-center class="scatter-chart-heading-left">Guilt Experience</h6>
+            </ion-col>
+            <ion-col size="6" text-center>
+                <h6 text-center class="scatter-chart-heading-right">Eat Enjoyment</h6>
+            </ion-col>
+            <ion-col size="12">
+                <div class="chart-wrapper">
+                    <div class="chart-area-wrapper" id="chart-area-wrapper">
+                      <div class="chart-area-wrapper-container" id="chart-area-container">
+                          <canvas #scatterCanvas></canvas>
+                      </div>
+                    </div>
+                      
+                    
+                  </div>
+             
+            </ion-col>
+        </ion-row>
+       <!--bar chart section-->
+        <ion-row class="margin-top">
+          <ion-col size="12">
+            <!-- <div id="container"></div> -->
+            <canvas #barCanvas></canvas>
+          </ion-col>
+        </ion-row>
+         <!--speedometer chart section-->
+        <p class="center-aligns m-t-20">
+            <span class="heading-experience">Eat Enjoyment</span>
+        </p>
+        <ion-row>
+          <ion-col>
+              <app-speedometer-chart></app-speedometer-chart>
+          </ion-col>
+        </ion-row>
+          <p class="sub-heading">
+              <b> &#952; = {{eatStatisfaction}} <br /> {{total}} {{total < '2' ? 'Rating' : 'Ratings'}}  </b>
+          </p>
+          <p class="center-aligns m-t-20">
+              <span class="heading-experience"> Guilt Experience</span>
+          </p>
+          <ion-row>
+            <ion-col>
+                <app-speedometer-guilt-chart></app-speedometer-guilt-chart>
+            </ion-col>
+          </ion-row>
+          <p class="sub-heading">
+              <b> &#952; = {{guilt}} <br /> {{total}} {{total < '2' ? 'Rating' : 'Ratings'}}  </b>
+          </p>
+        
+        
+</ion-content>

@@ -1,0 +1,32 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>screen5</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content no-bounce has-bouncing="false" forceOverscroll="false" padding-top>
+        <ion-row class="speedometer-section">
+            <ion-col>
+                <app-speedometer-static></app-speedometer-static>
+            </ion-col>
+        
+        </ion-row>
+        <ion-row justify-content-center align-items-center>
+            <ion-col size="12" class="center-aligns">
+                <h1  no-padding no-margin class="text-color-white">In {{displayTime}} minutes</h1>
+            </ion-col>
+            <ion-col class="center-aligns" style="position: absolute;text-align: center;bottom: 10%;">
+                
+                <ion-button shape="round" (click)="eatEatEnjoyment()"  class="my-eat-experience-buttons button-width"   padding><b>Rate now</b></ion-button>
+                <ion-button *ngIf="operatingSystem != 'ios'" shape="round" class="my-eat-experience-buttons button-width" (click)="appClosed()" padding><b>Ok</b></ion-button>
+               
+            </ion-col>
+            
+        </ion-row>
+         
+</ion-content>
+
+    
+       
+ 
+    

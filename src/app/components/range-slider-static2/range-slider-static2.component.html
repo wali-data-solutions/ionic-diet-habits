@@ -1,0 +1,46 @@
+<ion-row>
+    <ion-col size='5' class="flex-display">
+        <ion-img src="../../assets/icon/go_orange.png" class="go-away-button-size" (click)="screen4()"></ion-img>
+    
+    </ion-col>
+    <ion-col size='2' class="flex-display"  style="padding: 8% 0 4% 0;" >
+        
+    </ion-col>
+    <ion-col size='5' class="flex-display">
+        <ion-img src="../../assets/icon/go_yellow.png" class="go-away-button-size" (click)="checkoutScreen()"></ion-img>
+    </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col size='5' class="flex-display">
+        <div class="range-slider range-slider-container" id="range_slider_3b">
+            <input type="range" orient="vertical" id="desire" name="desire" min="{{min}}" max="{{max}}" />
+            <div class="range-slider__bar"></div>
+            <div class="range-slider__thumb"></div>
+            <div class="range-line range-slider__line">
+              <span class="lint-text">
+                  mylimit : {{desireLimit}}
+              </span>
+            </div>
+          </div>
+    </ion-col>
+    <ion-col  size='2' style="padding: 8% 0 4% 0;" >
+        <div class="full_width icon_max_smily" ><img style="display:none;" width="80px" src="../../../assets/icon/max_smily.png" /></div>
+        <div class="full_width icon_high_smily" ><img style="display:none;" width="80px" src="../../../assets/icon/high_smily.png" /></div>
+        <div class="full_width icon_medium_smily" ><img style="display:none;" width="80px" src="../../../assets/icon/medium_smily.png" /></div>
+        <div class="full_width icon_low_smily" ><img style="display:none;"  width="80px" src="../../../assets/icon/low_smily.png" /></div>
+    </ion-col>
+    <ion-col  size='5' class="flex-display">
+        <div class="range-slider range-slider-container" id="range_slider_3b_static">
+          <input type="range" orient="vertical" id="desire" name="desire" min="{{min}}" max="{{max}}" />
+          <div class="range-slider__bar"></div>
+          <div class="range-slider__thumb"></div>
+          <div class="line-right"></div>
+          <div class="line-top"></div>
+          <div class="point"></div>
+          <div class="range-line range-slider__line"></div>
+
+          
+        </div>
+    </ion-col>
+</ion-row>
+  
