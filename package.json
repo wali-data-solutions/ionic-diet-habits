@@ -35,7 +35,7 @@
     "@ionic-native/wheel-selector": "^5.1.0",
     "@ionic/angular": "^4.0.0",
     "@ionic/storage": "^2.2.0",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "cordova-android": "7.1.4",
     "cordova-browser": "5.0.4",
     "cordova-fabric-plugin": "^1.1.14-dev",
